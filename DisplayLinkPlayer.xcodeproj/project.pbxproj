@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C64FEF9D204D7AF300BF240D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64FEF9C204D7AF300BF240D /* AppDelegate.swift */; };
+		C64FEF9F204D7AF300BF240D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64FEF9E204D7AF300BF240D /* ViewController.swift */; };
+		C64FEFA2204D7AF300BF240D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64FEFA0204D7AF300BF240D /* Main.storyboard */; };
+		C64FEFA4204D7AF300BF240D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64FEFA3204D7AF300BF240D /* Assets.xcassets */; };
+		C64FEFA7204D7AF300BF240D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64FEFA5204D7AF300BF240D /* LaunchScreen.storyboard */; };
+		C64FEFB2204D7AF400BF240D /* DisplayLinkPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64FEFB1204D7AF400BF240D /* DisplayLinkPlayerTests.swift */; };
+		C64FEFBD204D7AF400BF240D /* DisplayLinkPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64FEFBC204D7AF400BF240D /* DisplayLinkPlayerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C64FEFAE204D7AF400BF240D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C64FEF91204D7AF300BF240D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C64FEF98204D7AF300BF240D;
+			remoteInfo = DisplayLinkPlayer;
+		};
+		C64FEFB9204D7AF400BF240D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C64FEF91204D7AF300BF240D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C64FEF98204D7AF300BF240D;
+			remoteInfo = DisplayLinkPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C64FEF99204D7AF300BF240D /* DisplayLinkPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisplayLinkPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C64FEF9C204D7AF300BF240D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C64FEF9E204D7AF300BF240D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C64FEFA1204D7AF300BF240D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C64FEFA3204D7AF300BF240D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C64FEFA6204D7AF300BF240D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C64FEFA8204D7AF300BF240D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C64FEFAD204D7AF400BF240D /* DisplayLinkPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisplayLinkPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C64FEFB1204D7AF400BF240D /* DisplayLinkPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLinkPlayerTests.swift; sourceTree = "<group>"; };
+		C64FEFB3204D7AF400BF240D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C64FEFB8204D7AF400BF240D /* DisplayLinkPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisplayLinkPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C64FEFBC204D7AF400BF240D /* DisplayLinkPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLinkPlayerUITests.swift; sourceTree = "<group>"; };
+		C64FEFBE204D7AF400BF240D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C64FEF96204D7AF300BF240D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C64FEFAA204D7AF400BF240D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C64FEFB5204D7AF400BF240D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C64FEF90204D7AF300BF240D = {
+			isa = PBXGroup;
+			children = (
+				C64FEF9B204D7AF300BF240D /* DisplayLinkPlayer */,
+				C64FEFB0204D7AF400BF240D /* DisplayLinkPlayerTests */,
+				C64FEFBB204D7AF400BF240D /* DisplayLinkPlayerUITests */,
+				C64FEF9A204D7AF300BF240D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C64FEF9A204D7AF300BF240D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C64FEF99204D7AF300BF240D /* DisplayLinkPlayer.app */,
+				C64FEFAD204D7AF400BF240D /* DisplayLinkPlayerTests.xctest */,
+				C64FEFB8204D7AF400BF240D /* DisplayLinkPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C64FEF9B204D7AF300BF240D /* DisplayLinkPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				C64FEF9C204D7AF300BF240D /* AppDelegate.swift */,
+				C64FEF9E204D7AF300BF240D /* ViewController.swift */,
+				C64FEFA0204D7AF300BF240D /* Main.storyboard */,
+				C64FEFA3204D7AF300BF240D /* Assets.xcassets */,
+				C64FEFA5204D7AF300BF240D /* LaunchScreen.storyboard */,
+				C64FEFA8204D7AF300BF240D /* Info.plist */,
+			);
+			path = DisplayLinkPlayer;
+			sourceTree = "<group>";
+		};
+		C64FEFB0204D7AF400BF240D /* DisplayLinkPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C64FEFB1204D7AF400BF240D /* DisplayLinkPlayerTests.swift */,
+				C64FEFB3204D7AF400BF240D /* Info.plist */,
+			);
+			path = DisplayLinkPlayerTests;
+			sourceTree = "<group>";
+		};
+		C64FEFBB204D7AF400BF240D /* DisplayLinkPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C64FEFBC204D7AF400BF240D /* DisplayLinkPlayerUITests.swift */,
+				C64FEFBE204D7AF400BF240D /* Info.plist */,
+			);
+			path = DisplayLinkPlayerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C64FEF98204D7AF300BF240D /* DisplayLinkPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C64FEFC1204D7AF400BF240D /* Build configuration list for PBXNativeTarget "DisplayLinkPlayer" */;
+			buildPhases = (
+				C64FEF95204D7AF300BF240D /* Sources */,
+				C64FEF96204D7AF300BF240D /* Frameworks */,
+				C64FEF97204D7AF300BF240D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DisplayLinkPlayer;
+			productName = DisplayLinkPlayer;
+			productReference = C64FEF99204D7AF300BF240D /* DisplayLinkPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C64FEFAC204D7AF400BF240D /* DisplayLinkPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C64FEFC4204D7AF400BF240D /* Build configuration list for PBXNativeTarget "DisplayLinkPlayerTests" */;
+			buildPhases = (
+				C64FEFA9204D7AF400BF240D /* Sources */,
+				C64FEFAA204D7AF400BF240D /* Frameworks */,
+				C64FEFAB204D7AF400BF240D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C64FEFAF204D7AF400BF240D /* PBXTargetDependency */,
+			);
+			name = DisplayLinkPlayerTests;
+			productName = DisplayLinkPlayerTests;
+			productReference = C64FEFAD204D7AF400BF240D /* DisplayLinkPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C64FEFB7204D7AF400BF240D /* DisplayLinkPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C64FEFC7204D7AF400BF240D /* Build configuration list for PBXNativeTarget "DisplayLinkPlayerUITests" */;
+			buildPhases = (
+				C64FEFB4204D7AF400BF240D /* Sources */,
+				C64FEFB5204D7AF400BF240D /* Frameworks */,
+				C64FEFB6204D7AF400BF240D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C64FEFBA204D7AF400BF240D /* PBXTargetDependency */,
+			);
+			name = DisplayLinkPlayerUITests;
+			productName = DisplayLinkPlayerUITests;
+			productReference = C64FEFB8204D7AF400BF240D /* DisplayLinkPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C64FEF91204D7AF300BF240D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = anthrgrnwrld;
+				TargetAttributes = {
+					C64FEF98204D7AF300BF240D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					C64FEFAC204D7AF400BF240D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C64FEF98204D7AF300BF240D;
+					};
+					C64FEFB7204D7AF400BF240D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C64FEF98204D7AF300BF240D;
+					};
+				};
+			};
+			buildConfigurationList = C64FEF94204D7AF300BF240D /* Build configuration list for PBXProject "DisplayLinkPlayer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C64FEF90204D7AF300BF240D;
+			productRefGroup = C64FEF9A204D7AF300BF240D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C64FEF98204D7AF300BF240D /* DisplayLinkPlayer */,
+				C64FEFAC204D7AF400BF240D /* DisplayLinkPlayerTests */,
+				C64FEFB7204D7AF400BF240D /* DisplayLinkPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C64FEF97204D7AF300BF240D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C64FEFA7204D7AF300BF240D /* LaunchScreen.storyboard in Resources */,
+				C64FEFA4204D7AF300BF240D /* Assets.xcassets in Resources */,
+				C64FEFA2204D7AF300BF240D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C64FEFAB204D7AF400BF240D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C64FEFB6204D7AF400BF240D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C64FEF95204D7AF300BF240D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C64FEF9F204D7AF300BF240D /* ViewController.swift in Sources */,
+				C64FEF9D204D7AF300BF240D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C64FEFA9204D7AF400BF240D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C64FEFB2204D7AF400BF240D /* DisplayLinkPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C64FEFB4204D7AF400BF240D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C64FEFBD204D7AF400BF240D /* DisplayLinkPlayerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C64FEFAF204D7AF400BF240D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C64FEF98204D7AF300BF240D /* DisplayLinkPlayer */;
+			targetProxy = C64FEFAE204D7AF400BF240D /* PBXContainerItemProxy */;
+		};
+		C64FEFBA204D7AF400BF240D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C64FEF98204D7AF300BF240D /* DisplayLinkPlayer */;
+			targetProxy = C64FEFB9204D7AF400BF240D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C64FEFA0204D7AF300BF240D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C64FEFA1204D7AF300BF240D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C64FEFA5204D7AF300BF240D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C64FEFA6204D7AF300BF240D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C64FEFBF204D7AF400BF240D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C64FEFC0204D7AF400BF240D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C64FEFC2204D7AF400BF240D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WBV73EJ8V2;
+				INFOPLIST_FILE = DisplayLinkPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.anthrgrnwrld.www.DisplayLinkPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C64FEFC3204D7AF400BF240D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WBV73EJ8V2;
+				INFOPLIST_FILE = DisplayLinkPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.anthrgrnwrld.www.DisplayLinkPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C64FEFC5204D7AF400BF240D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WBV73EJ8V2;
+				INFOPLIST_FILE = DisplayLinkPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.anthrgrnwrld.www.DisplayLinkPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DisplayLinkPlayer.app/DisplayLinkPlayer";
+			};
+			name = Debug;
+		};
+		C64FEFC6204D7AF400BF240D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WBV73EJ8V2;
+				INFOPLIST_FILE = DisplayLinkPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.anthrgrnwrld.www.DisplayLinkPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DisplayLinkPlayer.app/DisplayLinkPlayer";
+			};
+			name = Release;
+		};
+		C64FEFC8204D7AF400BF240D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WBV73EJ8V2;
+				INFOPLIST_FILE = DisplayLinkPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.anthrgrnwrld.www.DisplayLinkPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DisplayLinkPlayer;
+			};
+			name = Debug;
+		};
+		C64FEFC9204D7AF400BF240D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WBV73EJ8V2;
+				INFOPLIST_FILE = DisplayLinkPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.anthrgrnwrld.www.DisplayLinkPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DisplayLinkPlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C64FEF94204D7AF300BF240D /* Build configuration list for PBXProject "DisplayLinkPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C64FEFBF204D7AF400BF240D /* Debug */,
+				C64FEFC0204D7AF400BF240D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C64FEFC1204D7AF400BF240D /* Build configuration list for PBXNativeTarget "DisplayLinkPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C64FEFC2204D7AF400BF240D /* Debug */,
+				C64FEFC3204D7AF400BF240D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C64FEFC4204D7AF400BF240D /* Build configuration list for PBXNativeTarget "DisplayLinkPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C64FEFC5204D7AF400BF240D /* Debug */,
+				C64FEFC6204D7AF400BF240D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C64FEFC7204D7AF400BF240D /* Build configuration list for PBXNativeTarget "DisplayLinkPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C64FEFC8204D7AF400BF240D /* Debug */,
+				C64FEFC9204D7AF400BF240D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C64FEF91204D7AF300BF240D /* Project object */;
+}
