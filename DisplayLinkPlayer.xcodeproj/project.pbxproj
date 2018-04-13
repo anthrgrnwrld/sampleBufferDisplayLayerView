@@ -14,6 +14,7 @@
 		C64FEFA7204D7AF300BF240D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64FEFA5204D7AF300BF240D /* LaunchScreen.storyboard */; };
 		C64FEFB2204D7AF400BF240D /* DisplayLinkPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64FEFB1204D7AF400BF240D /* DisplayLinkPlayerTests.swift */; };
 		C64FEFBD204D7AF400BF240D /* DisplayLinkPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64FEFBC204D7AF400BF240D /* DisplayLinkPlayerUITests.swift */; };
+		C64FEFCD205FD15700BF240D /* SampleBufferDisplayLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64FEFCC205FD15600BF240D /* SampleBufferDisplayLayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C64FEFB8204D7AF400BF240D /* DisplayLinkPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisplayLinkPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64FEFBC204D7AF400BF240D /* DisplayLinkPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLinkPlayerUITests.swift; sourceTree = "<group>"; };
 		C64FEFBE204D7AF400BF240D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C64FEFCC205FD15600BF240D /* SampleBufferDisplayLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBufferDisplayLayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				C64FEF9C204D7AF300BF240D /* AppDelegate.swift */,
 				C64FEF9E204D7AF300BF240D /* ViewController.swift */,
+				C64FEFCC205FD15600BF240D /* SampleBufferDisplayLayerView.swift */,
 				C64FEFA0204D7AF300BF240D /* Main.storyboard */,
 				C64FEFA3204D7AF300BF240D /* Assets.xcassets */,
 				C64FEFA5204D7AF300BF240D /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				C64FEF9F204D7AF300BF240D /* ViewController.swift in Sources */,
 				C64FEF9D204D7AF300BF240D /* AppDelegate.swift in Sources */,
+				C64FEFCD205FD15700BF240D /* SampleBufferDisplayLayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

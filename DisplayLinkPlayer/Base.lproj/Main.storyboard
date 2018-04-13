@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +14,37 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DisplayLinkPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="SampleBufferDisplayLayerView" customModule="DisplayLinkPlayer" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiy-Gg-7eb">
+                                <rect key="frame" x="149.66666666666666" y="386.66666666666669" width="75" height="48.666666666666686"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pressMovieLibraryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gZD-Xy-HWx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIK-Lb-cZg">
+                                <rect key="frame" x="164" y="542" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pressTogglePlayPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0dL-hB-Waj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yiy-Gg-7eb" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="1/15" id="1TR-x0-lan"/>
+                            <constraint firstItem="pIK-Lb-cZg" firstAttribute="centerX" secondItem="yiy-Gg-7eb" secondAttribute="centerX" id="GaW-8C-1t2"/>
+                            <constraint firstItem="yiy-Gg-7eb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UAh-eS-kkM"/>
+                            <constraint firstItem="yiy-Gg-7eb" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="1/5" id="VGL-Kj-hdo"/>
+                            <constraint firstItem="yiy-Gg-7eb" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="dhT-qw-PhJ"/>
+                            <constraint firstItem="pIK-Lb-cZg" firstAttribute="top" secondItem="yiy-Gg-7eb" secondAttribute="bottom" constant="106.66666666666663" id="fPm-k4-HaS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
