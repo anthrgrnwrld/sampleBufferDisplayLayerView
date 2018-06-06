@@ -8,8 +8,20 @@
 
 import UIKit
 import AVFoundation
+import Vision
 
 class SampleBufferDisplayLayerView: UIView, AVPlayerItemOutputPullDelegate {
+	
+	private var requestHandler: VNSequenceRequestHandler = VNSequenceRequestHandler()
+	private var lastObservation: VNDetectedObjectObservation?
+	private lazy var highlightView: UIView = {
+		let view = UIView()
+		view.layer.borderColor = UIColor.white.cgColor
+		view.layer.borderWidth = 4
+		view.backgroundColor = .clear
+		return view
+	}()
+	private var isTouched: Bool = false
 	
 	override public class var layerClass: Swift.AnyClass {
 		get {
@@ -91,8 +103,15 @@ class SampleBufferDisplayLayerView: UIView, AVPlayerItemOutputPullDelegate {
 		
 		var err: OSStatus = noErr
 		
+		let ciImage:CIImage = CIImage(cvPixelBuffer: pixelBuffer)
+		let orientation:CGImagePropertyOrientation = CGImagePropertyOrientation.right
+		let targetCIImage = ciImage.oriented(orientation)	//回転させたい時はこっち
+//		let targetCIImage = ciImage							//回転させたくない時はこっち
+		
+		let targetPixelBuffer:CVPixelBuffer = convertFromCIImageToCVPixelBuffer(ciImage: targetCIImage)!
+		
 		if videoInfo == nil {
-			err = CMVideoFormatDescriptionCreateForImageBuffer(nil, pixelBuffer, &videoInfo)
+			err = CMVideoFormatDescriptionCreateForImageBuffer(nil, targetPixelBuffer, &videoInfo)
 
 			if (err != noErr) {
 				print("Error at CMVideoFormatDescriptionCreateForImageBuffer \(err)")
@@ -100,10 +119,12 @@ class SampleBufferDisplayLayerView: UIView, AVPlayerItemOutputPullDelegate {
 			
 		}
 		
+		detectObject(pixelBuffer: targetPixelBuffer)
+		
 		var sampleTimingInfo = CMSampleTimingInfo(duration: kCMTimeInvalid, presentationTimeStamp: outputTime, decodeTimeStamp: kCMTimeInvalid)
 		
 		var sampleBuffer: CMSampleBuffer?
-		err = CMSampleBufferCreateForImageBuffer(nil, pixelBuffer, true, nil, nil, videoInfo!, &sampleTimingInfo, &sampleBuffer)
+		err = CMSampleBufferCreateForImageBuffer(nil, targetPixelBuffer, true, nil, nil, videoInfo!, &sampleTimingInfo, &sampleBuffer)
 		if (err != noErr) {
 			NSLog("Error at CMSampleBufferCreateForImageBuffer \(err)")
 		}
@@ -114,4 +135,102 @@ class SampleBufferDisplayLayerView: UIView, AVPlayerItemOutputPullDelegate {
 
 		sampleBuffer = nil
 	}
+	
+
+	
+	
+	private func convertFromCIImageToCVPixelBuffer (ciImage:CIImage) -> CVPixelBuffer? {
+		let size:CGSize = ciImage.extent.size
+		var pixelBuffer:CVPixelBuffer?
+		let options = [
+			kCVPixelBufferCGImageCompatibilityKey as String: true,
+			kCVPixelBufferCGBitmapContextCompatibilityKey as String: true,
+			kCVPixelBufferIOSurfacePropertiesKey as String: [:]
+			] as [String : Any]
+		
+		let status:CVReturn = CVPixelBufferCreate(kCFAllocatorDefault,
+												  Int(size.width),
+												  Int(size.height),
+												  kCVPixelFormatType_32BGRA,
+												  options as CFDictionary,
+												  &pixelBuffer)
+		
+		
+		CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+		CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+		
+		let ciContext = CIContext()
+		
+		if (status == kCVReturnSuccess && pixelBuffer != nil) {
+			ciContext.render(ciImage, to: pixelBuffer!)
+		}
+		
+		return pixelBuffer
+	}
+	
+	
+	private func detectObject (pixelBuffer: CVPixelBuffer) {
+		
+		guard
+			let lastObservation = self.lastObservation
+			else {
+				requestHandler = VNSequenceRequestHandler()
+				return
+		}
+		
+		if self.isTouched { return }
+		
+		let request = VNTrackObjectRequest(detectedObjectObservation: lastObservation, completionHandler: update)
+		
+		request.trackingLevel = .accurate
+		
+		do {
+			try requestHandler.perform([request], on: pixelBuffer)	//画像処理の実行
+		} catch {
+			print("Throws: \(error)")
+		}
+		
+	}
+	
+	
+	private func update(_ request: VNRequest, error: Error?) {
+		
+		DispatchQueue.main.async {
+			guard let newObservation = request.results?.first as? VNDetectedObjectObservation else { return }
+
+			self.lastObservation = newObservation
+			guard newObservation.confidence >= 0.3 else {
+				self.highlightView.frame = .zero
+				return
+			}
+			var transformedRect = newObservation.boundingBox
+			transformedRect.origin.y = 1 - transformedRect.origin.y
+			
+			let t = CGAffineTransform(scaleX: self.frame.size.width, y: self.frame.size.height)
+			let convertedRect = transformedRect.applying(t)
+			self.highlightView.frame = convertedRect
+		}
+	}
+	
+	//ViewControllerのtouchesBeganの中の処理でSampleBufferDisplayLayerView.touchBeganを呼び出してあげる
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		highlightView.frame = .zero
+		lastObservation = nil
+		isTouched = true
+	}
+	
+	//ViewControllerのtouchesEndedの中の処理でSampleBufferDisplayLayerView.touchesEndedを呼び出してあげる
+	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+		guard let touch: UITouch = touches.first else { return }
+		highlightView.frame.size = CGSize(width: 90, height: 90)
+		highlightView.center = touch.location(in: self)
+		isTouched = false
+		
+		let t = CGAffineTransform(scaleX: 1.0 / self.frame.size.width, y: 1.0 / self.frame.size.height)
+		var normalizedTrackImageBoundingBox = highlightView.frame.applying(t)
+		normalizedTrackImageBoundingBox.origin.y = 1 - normalizedTrackImageBoundingBox.origin.y
+		lastObservation = VNDetectedObjectObservation(boundingBox: normalizedTrackImageBoundingBox)
+		self.addSubview(highlightView)
+	}
+	
 }

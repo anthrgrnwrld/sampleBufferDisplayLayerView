@@ -92,4 +92,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 		
 	}
 	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		sampleBufferDiaplayLayerView.touchesBegan(touches, with: event)
+	}
+	
+	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+		sampleBufferDiaplayLayerView.touchesEnded(touches, with: event)
+	}
+	
 }
